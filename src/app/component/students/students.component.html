@@ -1,0 +1,23 @@
+<h2>Students</h2>
+<button [disabled]="enabledAdd " class="btn btn-light btn-block mb-3"> Add New User </button> 
+<ul class="list-unstyled">
+  <li class="card card-body mb-2" *ngFor="let student of students">
+
+    <div class="row">
+       <div class="col-sm-4">
+         <img class="img-fluid" [src]="student.image" alt="">
+       </div>
+       <div class="col-sm-8">
+          <h3>{{student.fname}}, {{student.lname}} </h3>
+          <ul class="list-group">
+           <li class="list-group-item">Age : {{student.age}} </li>
+           <li class="list-group-item">Address : {{student.address.street}}, {{student.address.city}}, {{student.address.state}} . </li>
+          </ul>
+       </div>
+    </div>
+
+   
+  </li>
+</ul>
+
+
